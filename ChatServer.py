@@ -49,7 +49,9 @@ if __name__ == "__main__":
 			else:
 				# Data received from client, process it
 				try:
+
 					data = sock.recv(RECV_BUFFER)
+					
 					if data:
 						broadcast_data(sock, "\r" + '<' + str(sock.getpeername()) + '>' + data)
 
@@ -59,7 +61,7 @@ if __name__ == "__main__":
 					sock.close()
 					CONNECTION_LIST.remove(sock)
 					continue
-					
+
 	
 	server_socket.close()
 
