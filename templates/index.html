@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<script>
-			var ws = new WebSocket('ws://101.6.59.99:8000/soc');
+			var ws = new WebSocket('ws://101.6.58.175:8000/soc');
 				ws.onmessage = function(event){
 					var table = document.getElementById('message');
 					var data = eval('(' + event.data + ')');
@@ -24,9 +24,14 @@
 				ws.send(document.getElementById('chat').value);
 				document.getElementById('chat').value = '';
 			}
+			function enterKey(event){    
+            if(event.keyCode==13) {//键盘按下Enter键  
+                send();  
+            }  
+        }  
 		</script>
 	</head>
 	<body>
-		<input id='chat'><button onclick="send()">Send</button>
+		<input id='chat' onkeypress="enterKey(event)"><button onclick="send()">Send</button>
 		<table id='message' border='1'></table>
 	</body>
