@@ -1,7 +1,12 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script>
-			var ws = new WebSocket('ws://101.6.58.175:8000/soc');
+			var ws = new WebSocket('ws://localhost:8000/soc');
 				ws.onmessage = function(event){
 					var table = document.getElementById('message');
 					var data = eval('(' + event.data + ')');
@@ -32,6 +37,25 @@
 		</script>
 	</head>
 	<body>
-		<input id='chat' onkeypress="enterKey(event)"><button onclick="send()">Send</button>
-		<table id='message' border='1'></table>
+		<header class="top-header jumbotron" style="background-image: url(pic/banner1215.jpg);  background-repeat:no-repeat; height:100px">
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<table id='message' border='1'></table>
+					</div>
+					<div class="row">
+						<input id='chat' onkeypress="enterKey(event)"><button onclick="send()">Send</button>
+
+					</div>
+					
+				</div>	
+				<div class="col-md-6">
+					
+				</div>
+			</div>
+		</div>
+		
+		
 	</body>

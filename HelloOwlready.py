@@ -1,6 +1,5 @@
 from owlreadyutil.OntoImporter import Ontology
 
-
 if __name__ == '__main__':
 	# getOntology("/home/kiwi/Downloads/","pizzaowl.owl")
 	# print (onto.classes)
