@@ -1,0 +1,52 @@
+.overflow{
+	overflow:scroll;
+	overflow-x: hidden;
+}
+
+.height1{
+	height: 400px;
+}
+
+.height2{
+	height: 420px;
+}
+
+.withborder{
+  width: 100%;
+  color: #555;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.textbox{
+	margin: 10px;
+	padding: 10px;
+	min-width: 150px ;
+	max-width: 50%;
+	border:1px solid #ccc;
+	border-radius: 2px;
+	background-color: #b2e281;
+}
+
+.fromother{
+	float:left;
+}
+
+.fromself{
+	float:right;
+}
+
+.sysinfo{
+	padding: 5px;
+	min-width:100px;
+	max-width: 50%;
+	background-color: #eee;
+	border-radius: 2px;
+	text-align:center;
+}
+
+.center{
+	width: 50%;
+    margin: 5px auto; 
+}

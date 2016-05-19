@@ -2,32 +2,63 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/my.css">
 		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="static/arbor.js"></script>
+		<script src="static/arbor-tween.js"></script>
+		<script src="static/arborjsdemo.js"></script>
+
 		<script>
-			var ws = new WebSocket('ws://localhost:8000/soc');
+			var ws = new WebSocket('ws://101.6.59.73:8000/soc');
 				ws.onmessage = function(event){
-					var table = document.getElementById('message');
+					// var conversation = document.getElementById('message');
+					box = $('#message');
 					var data = eval('(' + event.data + ')');
 					({
 						'sys':function() {
-							var cell = table.insertRow().insertCell();
-							cell.colSpan = 2;
-							cell.innerHTML = data['message'];
+							addMessage(box,'<div class="center sysinfo">' + data['message'] + '</div>' )
 						},
 						'user':function() {
-							var row = table.insertRow();
-							row.insertCell().innerHTML = data ['message'];
-							row.insertCell().innerHTML = data['id'];
-
+							addMessage(box,'<div class="textbox fromother">' +
+								data ['message'] +
+								'</div>')
+							// $('#message').append('<div class="textbox fromother">' +
+							// 	data ['message'] +
+							// 	'</div>')
+						},
+						'self': function() {
+							addMessage(box,'<div class="textbox fromself">' +
+								data ['message'] +
+								'</div>')
+							// $('#message').append('<div class="textbox fromself">' +
+							// 	data ['message'] +
+							// 	'</div>')
+						},
+						'term': function() {
+							// console.log(data['message'][0])
+							$.each(data['message'],function(key,value){
+								$('#foo').trigger("click",value)
+							})
+							
 						},
 					}[data['type']])();
+
+					
+    				$("#messagebox").animate({ scrollTop: $('#messagebox')[0].scrollHeight}, 1000);
 			};
+
+			function addMessage(div,message) {
+				div.append('<div class="row"><div class="col-md-12">' + message + '</div></div>');
+				// div.append(message);
+				// div.append('</row>')
+			}
 
 			function send() {
 				ws.send(document.getElementById('chat').value);
 				document.getElementById('chat').value = '';
+				// $("#foo").trigger("click");
 			}
 			function enterKey(event){    
             if(event.keyCode==13) {//键盘按下Enter键  
@@ -37,25 +68,39 @@
 		</script>
 	</head>
 	<body>
-		<header class="top-header jumbotron" style="background-image: url(pic/banner1215.jpg);  background-repeat:no-repeat; height:100px">
+		<header class="top-header jumbotron" style="background-image: url(pic/banner1215.jpg); background-size:cover; background-repeat:no-repeat;">
 		</header>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<div class="row">
-						<table id='message' border='1'></table>
+				<div class="col-md-6" >
+					<div class="row overflow height1 withborder" id='messagebox'>
+						<div id='message'>
+							
+						</div>
 					</div>
-					<div class="row">
-						<input id='chat' onkeypress="enterKey(event)"><button onclick="send()">Send</button>
 
+
+					<div class="row">
+						<div class="input-group">
+							<input id='chat' type="text" class="form-control" onkeypress="enterKey(event)" placeholder="Your idea... #Term# please">
+							<span class="input-group-btn">
+							<button class="btn btn-default" type="button" onclick="send()">Send</button>
+							</span>
+						</div>
 					</div>
 					
 				</div>	
 				<div class="col-md-6">
+					<div id='termMap' class="height2 withborder">
+						<canvas id="viewport" width="800" height="600"></canvas>
+					</div>
 					
 				</div>
 			</div>
+
 		</div>
-		
+		<div id="foo">
+			
+		</div>
 		
 	</body>

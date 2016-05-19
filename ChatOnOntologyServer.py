@@ -19,6 +19,14 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 		for c in SocketHandler.clients:
 			c.write_message(json.dumps(message))
 
+	def send_to_other(self,message):
+		for c in SocketHandler.clients:
+			if not (c is self):
+				c.write_message(json.dumps(message))
+
+	def send_to_self(self,message):
+		self.write_message(json.dumps(message))
+
 	def open(self):
 		self.write_message(json.dumps({
 			'type':'sys',
@@ -38,12 +46,27 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 			})
 
 	def on_message(self, message):
-		sentence = Sentence(message)
-		SocketHandler.send_to_all({
+		
+		SocketHandler.send_to_other(self,{
 			'type': 'user',
 			'id': id(self),
-			'message': message + str(sentence.getTerms()),
+			'message': message,
 			})
+
+		SocketHandler.send_to_self(self,{
+			'type': 'self',
+			'id': id(self),
+			'message': message,
+			})
+
+		sentence = Sentence(message)
+		termlist = sentence.getTerms()
+		if (len(termlist) != 0):
+			SocketHandler.send_to_all({
+				'type': 'term',
+				'id': id(self),
+				'message': termlist,
+				})
 		
 
 if __name__ == '__main__':
@@ -51,6 +74,7 @@ if __name__ == '__main__':
 			('/', Index),
 			('/soc', SocketHandler),
 			('/pic/(.*)', tornado.web.StaticFileHandler, {'path': '/home/kiwi/code/python/OntologyChat/templates/pic/'}),
+			('/static/(.*)', tornado.web.StaticFileHandler, {'path': '/home/kiwi/code/python/OntologyChat/templates/static/'}),
 		])
 	app.listen(8000)
 	tornado.ioloop.IOLoop.instance().start()
