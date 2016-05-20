@@ -13,6 +13,8 @@ class Sentence(object):
 			if (not flag): 
 				break
 			end = self.sen.find('#', start)
+			if (end == -1):
+				break
 			flag = end + 1
 			termList.append(self.sen[start:end])
 

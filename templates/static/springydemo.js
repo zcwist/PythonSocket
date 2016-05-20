@@ -32,11 +32,13 @@ $(document).ready(function(){
 					nodeparentlabel = data['message']['parent'];
 					var parentnode = null;
 					if (nodeparentlabel != ''){
+						parentnode = findNodeByLabel(nodeparentlabel);
 						$.each(graph.nodes, function(index, val) {
 							if (val['data']['label'] == nodeparentlabel){
 								parentnode = val;
 							}
 						});
+						console.log(parentnode);
 					}
 
 					$.each(data['message']['termlist'],function(key,value){
@@ -44,9 +46,35 @@ $(document).ready(function(){
 						$('#foo').trigger("click",[value, parentnode]);
 					})
 					
-
-					
 				},
+				'request':function(){
+					({
+						'connectrequest': function(){
+							console.log("get a connectrequest");
+
+							var childnode;
+							var parentnode;
+
+							$.each(graph.nodes, function(index, val) {
+								if (val['data']['label'] == data['message']['child']){
+									childnode = val;
+									
+								}
+							});
+
+							$.each(graph.nodes, function(index, val) {
+								if (val['data']['label'] == data['message']['parent']){
+									parentnode = val;
+									
+								}
+							
+							});
+							newEdgeWithColor(childnode, parentnode);
+
+						}
+					}[data['message']['type']])();
+					
+				}
 			}[data['type']])();
 
 			
@@ -61,6 +89,7 @@ $(document).ready(function(){
 
 	function send() {
 		message = {
+			'type': 'dialog',
 			'content': $("#chat").val(),
 			'parent': selectnode
 		}
@@ -170,7 +199,7 @@ $(document).ready(function(){
 		});
 
 		if (parentnode != null){
-			newEdgeRe(parentnode,newnode);
+			newEdgeWithColor(parentnode,newnode);
 		}
 		// console.log(graph);
 		// graph.addNodes(term);
@@ -187,6 +216,7 @@ $(document).ready(function(){
 
 	function newEdgeRequest(node1, node2){
 		message = {
+			'type':'connectrequest',
 			'child': node1['data']['label'],
 			'parent': node2['data']['label']
 		}
@@ -196,6 +226,16 @@ $(document).ready(function(){
 
 	function newEdgeWithColor(node1, node2){
 		graph.newEdge(node1,node2,{color: colorList[getRandomInt(0,6)]});
+	}
+
+	function findNodeByLabel(label){
+		console.log("looking for " + label);
+		$.each(graph.nodes, function(index, val) {
+				if (val['data']['label'] == label){
+					console.log(val);
+					return val;
+				}
+			});
 	}
 
 })

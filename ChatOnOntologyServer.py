@@ -46,6 +46,13 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 			})
 
 	def on_message(self, message):
+		if ('request' in eval(message)['type']):
+			SocketHandler.send_to_all({
+				'type': 'request',
+				'message': eval(message)
+				})
+			return
+		
 
 		
 		SocketHandler.send_to_other(self,{
