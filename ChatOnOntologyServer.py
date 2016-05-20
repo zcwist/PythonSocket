@@ -46,26 +46,31 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 			})
 
 	def on_message(self, message):
+
 		
 		SocketHandler.send_to_other(self,{
 			'type': 'user',
 			'id': id(self),
-			'message': message,
+			'message': eval(message),
 			})
 
 		SocketHandler.send_to_self(self,{
 			'type': 'self',
 			'id': id(self),
-			'message': message,
+			'message': eval(message),
 			})
 
 		sentence = Sentence(message)
 		termlist = sentence.getTerms()
 		if (len(termlist) != 0):
+			newmessage = {
+				"termlist": termlist,
+				"parent": eval(message)['parent']
+			}
 			SocketHandler.send_to_all({
 				'type': 'term',
 				'id': id(self),
-				'message': termlist,
+				'message': newmessage,
 				})
 		
 
