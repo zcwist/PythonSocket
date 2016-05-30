@@ -1,5 +1,8 @@
 $(document).ready(function(){
 	var ip = "localhost"
+	// ip = "101.6.58.160"
+	ip = "192.168.31.193"
+	console.log("loading")
 	var ws = new WebSocket('ws://'+ ip +':8000/soc');
 		ws.onmessage = function(event){
 			// var conversation = document.getElementById('message');
