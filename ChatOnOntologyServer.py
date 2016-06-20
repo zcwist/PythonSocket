@@ -85,8 +85,8 @@ if __name__ == '__main__':
 	app = tornado.web.Application([
 			('/', Index),
 			('/soc', SocketHandler),
-			('/pic/(.*)', tornado.web.StaticFileHandler, {'path': '/home/kiwi/code/python/OntologyChat/templates/pic/'}),
-			('/static/(.*)', tornado.web.StaticFileHandler, {'path': '/home/kiwi/code/python/OntologyChat/templates/static/'}),
+			('/pic/(.*)', tornado.web.StaticFileHandler, {'path': './templates/pic/'}),
+			('/static/(.*)', tornado.web.StaticFileHandler, {'path': './templates/static/'}),
 		])
 	app.listen(8000)
 	tornado.ioloop.IOLoop.instance().start()
