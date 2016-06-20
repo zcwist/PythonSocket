@@ -100,6 +100,9 @@ $(document).ready(function(){
 		ws.send(JSON.stringify(message));
 		document.getElementById('chat').value = '';
 		// $("#foo").trigger("click");
+		$("#selectnode").val('');
+		selectnode = ''
+
 	}
         
       

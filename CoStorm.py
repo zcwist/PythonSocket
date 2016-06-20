@@ -5,6 +5,7 @@ import tornado.websocket
 import json
 
 from Sentence import Sentence
+from DesignState import DesignState
 
 class Index(tornado.web.RequestHandler):
 	"""docstring for Index"""
@@ -28,6 +29,7 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 	def send_to_self(self,message):
 		self.write_message(json.dumps(message))
 
+
 	def open(self):
 		self.write_message(json.dumps({
 			'type':'sys',
@@ -47,6 +49,12 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 			})
 
 	def on_message(self, message):
+		designState = DesignState()
+		designState.wrapMessage(message)
+		# print(message)
+		print(designState.getStateJson())
+
+		
 		if ('request' in eval(message)['type']):
 			SocketHandler.send_to_all({
 				'type': 'request',
