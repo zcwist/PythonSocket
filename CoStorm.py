@@ -6,6 +6,8 @@ import json
 
 from Sentence import Sentence
 from DesignState import DesignState
+from DesignStateSolver import DesignStateSolver
+from StatesBroadcaster import StatesBroadcaster
 
 class Index(tornado.web.RequestHandler):
 	"""docstring for Index"""
@@ -48,13 +50,18 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 			'message': str(id(self)) + ' has left',
 			})
 
-	def on_message(self, message):
+	# def on_message(self, message): # abandoned 
 		designState = DesignState()
 		designState.wrapMessage(message)
+		designState.setId(id(self))
 		# print(message)
 		print(designState.getStateJson())
 
-		
+		stateType = designState.getType()
+
+
+
+
 		if ('request' in eval(message)['type']):
 			SocketHandler.send_to_all({
 				'type': 'request',
@@ -93,6 +100,12 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 				'id': id(self),
 				'message': newmessage,
 				})
+
+	def on_message(self, message):
+		print(message)
+		solver = DesignStateSolver(message)
+		broadcaster = StatesBroadcaster(solver.getStateToSend(),self)
+		broadcaster.broadcast()
 		
 
 if __name__ == '__main__':

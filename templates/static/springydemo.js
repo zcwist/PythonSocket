@@ -2,32 +2,39 @@ $(document).ready(function(){
 	var ip = "localhost"
 	// ip = "101.6.58.160"
 	// ip = "192.168.31.193"
-	console.log("loading")
 	var ws = new WebSocket('ws://'+ ip +':8000/soc');
 		ws.onmessage = function(event){
 			// var conversation = document.getElementById('message');
 			box = $('#message');
 			var data = eval('(' + event.data + ')');
+			console.log(data);
 			({
 				'sys':function() {
 					addMessage(box,'<div class="center sysinfo">' + data['message'] + '</div>' )
 				},
-				'user':function() {
-					addMessage(box,'<div class="textbox fromother">' +
-						data ['message']['content'] +
-						'</div>')
-					// $('#message').append('<div class="textbox fromother">' +
-					// 	data ['message'] +
-					// 	'</div>')
+
+				'dialog':function(){
+					({
+					'other':function() {
+						addMessage(box,'<div class="textbox fromother">' +
+							data['body']['message']['content'] +
+							'</div>')
+						// $('#message').append('<div class="textbox fromother">' +
+						// 	data ['message'] +
+						// 	'</div>')
+					},
+					'self': function() {
+						addMessage(box,'<div class="textbox fromself">' +
+							data ['body']['message']['content'] +
+							'</div>')
+						// $('#message').append('<div class="textbox fromself">' +
+						// 	data ['message'] +
+						// 	'</div>')
+					},
+
+					})[data['receiver']]();
 				},
-				'self': function() {
-					addMessage(box,'<div class="textbox fromself">' +
-						data ['message']['content'] +
-						'</div>')
-					// $('#message').append('<div class="textbox fromself">' +
-					// 	data ['message'] +
-					// 	'</div>')
-				},
+				
 				'term': function() {
 					// console.log(data['message'][0])
 					console.log(data['message']);
@@ -52,7 +59,7 @@ $(document).ready(function(){
 				},
 				'request':function(){
 					({
-						'connectrequest': function(){
+						'connect_request': function(){
 							console.log("get a connectrequest");
 
 							var childnode;
@@ -75,7 +82,7 @@ $(document).ready(function(){
 							newEdgeWithColor(childnode, parentnode);
 
 						}
-					}[data['message']['type']])();
+					}[data['body']['request_type']])();
 					
 				}
 			}[data['type']])();
@@ -93,8 +100,15 @@ $(document).ready(function(){
 	function send() {
 		message = {
 			'type': 'dialog',
-			'content': $("#chat").val(),
-			'parent': selectnode
+			'body':
+			{
+				'message':
+				{
+					'content': $("#chat").val(),
+					'parent': selectnode
+				}
+			}
+			
 		}
 		// ws.send(document.getElementById('chat').value);
 		ws.send(JSON.stringify(message));

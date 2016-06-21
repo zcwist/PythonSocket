@@ -1,5 +1,8 @@
-from Sentence import Sentence
+from DesignStateSolver import DesignStateSolver
+from StatesBroadcaster import StatesBroadcaster
 
 if __name__ == '__main__':
-	sentence = Sentence("I'm a #Mac#. I am not #Ubuntu#. Lol")
-	print (sentence.getTerms())
+	message = '{"type":"dialog","body":{"message":{"content":"#hey#","parent":""}}}'
+	solver = DesignStateSolver(message)
+	broadcaster = StatesBroadcaster(solver.getStateToSend(),"abc")
+	broadcaster.broadcast()
