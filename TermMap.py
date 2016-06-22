@@ -20,6 +20,14 @@ class TermMap():
 			self.termMap[child] = []
 		self.termMap[child].append(parent)
 
+	# def isConnected(self,child,parent):
+	# 	print ("****")
+	# 	print (self.termMap[child])
+	# 	print ("****")
+	# 	if parent in self.termMap[child]:
+	# 		return True
+	# 	return False
+
 
 
 def tester():

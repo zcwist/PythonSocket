@@ -1,4 +1,5 @@
 from DesignState import DesignState
+from TermMap import TermMap
 
 class ConnectionDesignState(DesignState):
 	"""docstring for ConnectionDesignState"""
@@ -12,6 +13,8 @@ class ConnectionDesignState(DesignState):
 
 	
 	def addConnection(self, child, parent):
+		# if TermMap.isConnected(child,parent):
+		# 	return
 		self.statejson['body']['termlist'].append({child:parent});
 
 

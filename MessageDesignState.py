@@ -23,6 +23,9 @@ class MessageDesignState(DesignState):
 	def getContent(self):
 		return self.statejson['body']['message']['content']
 
+	def getParent(self):
+		return self.statejson['body']['message']['parent']
+
 	
 
 

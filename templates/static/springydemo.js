@@ -62,24 +62,34 @@ $(document).ready(function(){
 						'connect_request': function(){
 							console.log("get a connectrequest");
 
-							var childnode;
-							var parentnode;
 
-							$.each(graph.nodes, function(index, val) {
-								if (val['data']['label'] == data['message']['child']){
-									childnode = val;
-									
-								}
-							});
+							$.each(data['body']['termlist'], function(key,value){
+								console.log(value);
+								$.each(value, function(key1,value1){
+									// console.log(key1 + ":" + value1)
+									$('#foo').trigger("click",[key1.toString(),value1.toString()]);
+								})
+								
+							})
 
-							$.each(graph.nodes, function(index, val) {
-								if (val['data']['label'] == data['message']['parent']){
-									parentnode = val;
+							// var childnode;
+							// var parentnode;
+
+							// $.each(graph.nodes, function(index, val) {
+							// 	if (val['data']['label'] == data['message']['child']){
+							// 		childnode = val;
 									
-								}
+							// 	}
+							// });
+
+							// $.each(graph.nodes, function(index, val) {
+							// 	if (val['data']['label'] == data['message']['parent']){
+							// 		parentnode = val;
+									
+							// 	}
 							
-							});
-							newEdgeWithColor(childnode, parentnode);
+							// });
+							// newEdgeWithColor(childnode, parentnode);
 
 						}
 					}[data['body']['request_type']])();
@@ -205,20 +215,42 @@ $(document).ready(function(){
 		}
 	});
 	var selectnode = '';
-	$("#foo").on("click", function(event, term, parentnode){
-		console.log(parentnode);
-		var newnode = graph.newNode({
-			label: term,
-			ondoubleclick: function() {
-				$("#selectnode").val(term);
-				selectnode = term;
 
-				
-				console.log("Double click");
+	$("#foo").on("click", function(event, termstr, parentnodestr){
+		console.log(termstr + ":" + parentnodestr);
+		var newnode = null;
+		$.each(graph.nodes, function(index, val) {
+			if (val['data']['label'] == termstr){
+				newnode = val;
 			}
 		});
 
-		if (parentnode != null){
+		if (newnode == null) {
+			var newnode = graph.newNode({
+				label: termstr,
+				ondoubleclick: function() {
+					$("#selectnode").val(termstr);
+					selectnode = termstr;
+					console.log("Double click");
+				}
+			});
+		}
+
+
+
+
+		
+
+		if (parentnodestr != ""){
+			console.log("i'm here");
+			$.each(graph.nodes, function(index, val) {
+				if (val['data']['label'] == parentnodestr){
+					parentnode = val;
+				}
+			});
+			console.log(graph.nodes);
+			console.log(newnode);
+			console.log(parentnode);
 			newEdgeWithColor(parentnode,newnode);
 		}
 		// console.log(graph);
@@ -235,10 +267,15 @@ $(document).ready(function(){
 	}
 
 	function newEdgeRequest(node1, node2){
+		node1label = node1['data']['label'];
+		node2label = node2['data']['label'];
 		message = {
-			'type':'connectrequest',
-			'child': node1['data']['label'],
-			'parent': node2['data']['label']
+			'type':'request',
+			'body':{
+				// 'termlist':[{node1['data']['label']:node2['data']['label']}],
+				'termlist':[{node1label:node2label}],
+				'request_type': 'connect_request'
+			}
 		}
 		// ws.send(document.getElementById('chat').value);
 		ws.send(JSON.stringify(message));

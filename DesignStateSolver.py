@@ -44,19 +44,32 @@ class DesignStateSolver(object):
 
 			termMap = TermMap
 
-			parent = ""
 
-			for term in termlist:
-				#term appear in the term map, extract semantic relation
-				if (term in termMap.getTerms()):
-					parent = term
-					continue
-				termMap.addTerm(term)
-				termMap.addConnection(term,parent)
 
-				connection = ConnectionDesignState()
-				connection.addConnection(term, parent)
-				self.stateToSend.append(connection)
+			parent = self.receivedState.getParent()
+
+			if (parent == ""):
+
+				for term in termlist:
+					#term appear in the term map, extract semantic relation
+					if (term in termMap.getTerms()):
+						parent = term
+						continue
+					
+
+					connection = ConnectionDesignState()
+					connection.addConnection(term, parent)
+					self.stateToSend.append(connection)
+
+					termMap.addTerm(term)
+					termMap.addConnection(term,parent)
+
+			else:
+				for term in termlist:
+					connection = ConnectionDesignState()
+					connection.addConnection(term, parent)
+					self.stateToSend.append(connection)
+					termMap.addConnection(term,parent)
 
 
 		# connect request
