@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time
 
 path = "/Users/kiwi/Downloads/chromedriver"
 path = "/home/kiwi/Downloads/chromedriver"
@@ -14,7 +15,9 @@ file = open("script.log","r")
 
 for line in file:
 	elem.send_keys(line)
-	# elem.send_keys(Keys.RETURN)
+	time.sleep(1)
+
+elem.send_keys(Keys.RETURN)
 
 # driver.close()
 

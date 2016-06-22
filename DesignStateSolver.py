@@ -86,7 +86,7 @@ class DesignStateSolver(object):
 		return self.stateToSend
 
 	def printStatesToSend(self):
-		print ("There are %d states to send", len(self.stateToSend))
+		# print ("There are %d states to send", len(self.stateToSend))
 		for ds in self.stateToSend:
 			print (ds.getStateJson())
 

@@ -102,7 +102,7 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 				})
 
 	def on_message(self, message):
-		print(message)
+		# print(message)
 		solver = DesignStateSolver(message)
 		broadcaster = StatesBroadcaster(solver.getStateToSend(),self)
 		broadcaster.broadcast()

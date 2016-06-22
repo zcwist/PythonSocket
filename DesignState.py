@@ -1,5 +1,6 @@
 import json
 import time
+import ast
 
 class DesignState(object):
 	"""docstring for DesignState"""
@@ -24,4 +25,8 @@ class DesignState(object):
 
 	def getStateJson(self):
 		return self.statejson
+
+	def wrapMessage(self,message):
+		message = str(message)
+		self.statejson.update(ast.literal_eval(message))
 		

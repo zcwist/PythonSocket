@@ -242,15 +242,12 @@ $(document).ready(function(){
 		
 
 		if (parentnodestr != ""){
-			console.log("i'm here");
 			$.each(graph.nodes, function(index, val) {
 				if (val['data']['label'] == parentnodestr){
 					parentnode = val;
 				}
 			});
-			console.log(graph.nodes);
-			console.log(newnode);
-			console.log(parentnode);
+			
 			newEdgeWithColor(parentnode,newnode);
 		}
 		// console.log(graph);
@@ -267,16 +264,19 @@ $(document).ready(function(){
 	}
 
 	function newEdgeRequest(node1, node2){
-		node1label = node1['data']['label'];
-		node2label = node2['data']['label'];
+		var node1label = node1['data']['label'];
+		var node2label = node2['data']['label'];
+		nodespair = {}
+		nodespair[node2label]=node1label
 		message = {
 			'type':'request',
 			'body':{
 				// 'termlist':[{node1['data']['label']:node2['data']['label']}],
-				'termlist':[{node1label:node2label}],
+				'termlist':[nodespair],
 				'request_type': 'connect_request'
 			}
 		}
+		console.log(message);
 		// ws.send(document.getElementById('chat').value);
 		ws.send(JSON.stringify(message));
 	}

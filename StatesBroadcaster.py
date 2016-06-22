@@ -9,7 +9,7 @@ class StatesBroadcaster(object):
 
 	def broadcast(self):
 		for state in self.states:
-			print(state.getStateJson())
+			# print(state.getStateJson())
 			receiver = state.getReceiver()
 			if receiver == "all":
 				self.socketHandler.send_to_all(state.getStateJson())

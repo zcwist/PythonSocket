@@ -1,6 +1,6 @@
 import json
 import time
-import ast
+
 
 from DesignState import DesignState
 
@@ -11,10 +11,7 @@ class MessageDesignState(DesignState):
 	def __init__(self):
 		super(MessageDesignState, self).__init__()
 
-	def wrapMessage(self,message):
-		message = str(message)
-		self.statejson.update(ast.literal_eval(message))
-
+	
 	
 
 	def setMessage(self, message):

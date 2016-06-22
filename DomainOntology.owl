@@ -19,28 +19,28 @@
         <Class IRI="#OWLClass_66cbb10a_e99c_4fc1_b32f_05fc85b90fd7"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_b8c27f2b_6f5d_44aa_bc4c_02bbf8526bad"/>
+        <Class IRI="#OWLClass_b0b204c6_8288_4e55_9140_ed51780a2b17"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_b0b204c6_8288_4e55_9140_ed51780a2b17"/>
+        <Class IRI="#OWLClass_b8c27f2b_6f5d_44aa_bc4c_02bbf8526bad"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_efba2607_7b6d_4ac0_ac79_e2d26b7e92a6"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_8509d4ab_234e_41ad_ab27_3e3883c04075"/>
+        <Class IRI="#OWLClass_71f90e4a_d069_496c_9fb6_bde5ba625171"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_71f90e4a_d069_496c_9fb6_bde5ba625171"/>
+        <Class IRI="#OWLClass_8509d4ab_234e_41ad_ab27_3e3883c04075"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_342019a7_878d_402e_bd61_d89670326e4d"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_c3f0f3b0_37d3_4252_9e68_82a2a79eddec"/>
+        <Class IRI="#OWLClass_723fdece_42b7_46cb_a458_411a40810e0f"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_723fdece_42b7_46cb_a458_411a40810e0f"/>
+        <Class IRI="#OWLClass_c3f0f3b0_37d3_4252_9e68_82a2a79eddec"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_17e62edd_12d0_4def_bc04_e2043f29b3dd"/>
@@ -55,16 +55,16 @@
         <Class IRI="#OWLClass_f8bbfd03_14f1_49b0_8a6a_4093b1d410e5"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_1b12bfd3_774a_4c04_bb97_26db5cb31e8f"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#OWLClass_1ea38fe3_3826_40d8_b0e3_b01d36347f3a"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_3b43b626_bcaa_4bdb_86d4_d5f7ed30ac47"/>
+        <Class IRI="#OWLClass_1b12bfd3_774a_4c04_bb97_26db5cb31e8f"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_bd085b29_da91_4867_a937_06c6a5ad673d"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_3b43b626_bcaa_4bdb_86d4_d5f7ed30ac47"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_681a8fc8_4ca9_4f9b_bce6_f5ce73f5cefd"/>
@@ -91,22 +91,22 @@
         <Class IRI="#OWLClass_d72e7a0b_a2fb_4cf0_9da7_60bccf600395"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_5a49a7b6_3f96_48f4_a3b5_193ebe0f2fbe"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#OWLClass_c2a07895_ceda_432b_b06e_9652f593aa14"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_aafb1338_7a1d_433d_a824_44c771064fd6"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OWLClass_5a49a7b6_3f96_48f4_a3b5_193ebe0f2fbe"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#OWLClass_3b7291e0_8c10_4674_b7bf_2f9da8f918c5"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_2e922a11_8519_4ac7_90eb_0f9930c1c95a"/>
+        <Class IRI="#OWLClass_de0ecaad_8915_4ef7_8b4e_6b2a0d50b245"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_de0ecaad_8915_4ef7_8b4e_6b2a0d50b245"/>
+        <Class IRI="#OWLClass_2e922a11_8519_4ac7_90eb_0f9930c1c95a"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_a641ba9a_4b06_49fd_95c5_f2a641d0439b"/>
@@ -163,16 +163,16 @@
         <Class IRI="#OWLClass_0d2f9cc0_bd31_4567_9a81_0fa886668a74"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_f549a5e8_7ef6_4f50_afb0_ec47766198d7"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#OWLClass_6439784d_a6f2_44e8_8149_fbdc0e30a1f6"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_1a82d057_00be_495a_9084_d065ac26fcc4"/>
+        <Class IRI="#OWLClass_f549a5e8_7ef6_4f50_afb0_ec47766198d7"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_cf520ac8_ef30_4c1c_891a_e83bf604ce6b"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_1a82d057_00be_495a_9084_d065ac26fcc4"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_067e1e6a_8e93_4204_b68b_d9ad645de4b7"/>
@@ -181,10 +181,10 @@
         <Class IRI="#OWLClass_5f76a078_fee5_4a24_b694_833ec98226db"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_3f19b277_8f10_49e4_98bf_7f02672f9c40"/>
+        <Class IRI="#OWLClass_b643c034_1d27_4664_b6d6_4fcab9f78c47"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_b643c034_1d27_4664_b6d6_4fcab9f78c47"/>
+        <Class IRI="#OWLClass_3f19b277_8f10_49e4_98bf_7f02672f9c40"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_222133ea_5606_430f_ad18_a6825d3b9cb2"/>
@@ -205,10 +205,10 @@
         <Class IRI="#OWLClass_5c3cfe9e_78d5_4ab1_ba39_5a90e92d3aa0"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_e30491e7_cd2a_4a34_a657_e9aa5fa35c14"/>
+        <Class IRI="#OWLClass_f392d246_57cf_4838_8970_cece4bdfc1e8"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_f392d246_57cf_4838_8970_cece4bdfc1e8"/>
+        <Class IRI="#OWLClass_e30491e7_cd2a_4a34_a657_e9aa5fa35c14"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_bdd7d44a_8e92_4664_a888_57c7448fea21"/>
@@ -217,10 +217,10 @@
         <Class IRI="#OWLClass_90ae8ee3_b2b2_4242_97bf_9c90224c800c"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_699e4e01_5095_420e_a3f0_a191e269ef2f"/>
+        <Class IRI="#OWLClass_80b45025_3427_41dc_94fe_9d8ad949b38b"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_80b45025_3427_41dc_94fe_9d8ad949b38b"/>
+        <Class IRI="#OWLClass_699e4e01_5095_420e_a3f0_a191e269ef2f"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_ec95ab6b_5449_439b_8a84_b4d1901accff"/>
@@ -232,10 +232,10 @@
         <Class IRI="#OWLClass_9f8005c8_50b4_486a_acb7_c487156d03fd"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_951391ba_61f5_4587_9fa8_46cbb9cd5ae0"/>
+        <Class IRI="#OWLClass_7b05e67d_c130_4397_8cb4_9eb081709bff"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_7b05e67d_c130_4397_8cb4_9eb081709bff"/>
+        <Class IRI="#OWLClass_951391ba_61f5_4587_9fa8_46cbb9cd5ae0"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_3e7e22a9_fd26_4617_bea6_9106d32e8ef2"/>
@@ -271,10 +271,10 @@
         <Class IRI="#OWLClass_dc8a5bac_eeb5_46da_b1c3_f348190f2580"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_e24bd01c_3292_40b2_8cc5_ee4e6f946e95"/>
+        <Class IRI="#OWLClass_ff2582d9_8b91_4b08_9f32_db2c963dfecb"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_ff2582d9_8b91_4b08_9f32_db2c963dfecb"/>
+        <Class IRI="#OWLClass_e24bd01c_3292_40b2_8cc5_ee4e6f946e95"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_4313f448_b1f4_4978_b3be_52a0e4592ba3"/>
@@ -283,10 +283,10 @@
         <Class IRI="#OWLClass_4b027e9f_1df7_44b8_a2ae_232cd8d88ec4"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_9f7ef876_64a2_4c52_a13f_dcbf4c246c97"/>
+        <Class IRI="#OWLClass_9c320b7d_973c_486c_a7cb_7879355781a2"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_9c320b7d_973c_486c_a7cb_7879355781a2"/>
+        <Class IRI="#OWLClass_9f7ef876_64a2_4c52_a13f_dcbf4c246c97"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_cbe56fc2_0e92_4c56_bc31_1a2715078d39"/>
@@ -304,19 +304,19 @@
         <Class IRI="#OWLClass_c80bc91f_df32_47f5_b013_2a2d4152c56b"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OWLClass_dc8d250a_544f_4b57_9bb4_68633bae2f82"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#OWLClass_bc80f948_12d1_40e8_993d_d0ac357bde0e"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_fcbf3c03_5a61_4df4_a8a2_8e75b1d381b6"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_dc8d250a_544f_4b57_9bb4_68633bae2f82"/>
+        <Class IRI="#OWLClass_832a2908_7672_49c9_b5d2_01206ef76bce"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_e3fae20d_0f28_4e46_9f07_b081e332727b"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OWLClass_832a2908_7672_49c9_b5d2_01206ef76bce"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_a72724d1_9cd8_4290_8e5a_61070388152b"/>
@@ -328,19 +328,19 @@
         <Class IRI="#OWLClass_7f48b4e4_31e5_4fbd_b0ad_0dd9d8c24f86"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#OWLClass_0ef0895d_5553_4bdc_aa28_b2fbd3e73ea7"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#OWLClass_6603910e_d8e9_4124_99c8_8945362bd50c"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_6d093f8b_d142_4958_be42_a0a2f675f51a"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#OWLObjectProperty_3493240a_60f5_4f5e_9e25_31aecaa152f1"/>
+        <Class IRI="#OWLClass_0ef0895d_5553_4bdc_aa28_b2fbd3e73ea7"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_8e4e2597_0c63_4de8_a837_3242e1d6bc5d"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_3493240a_60f5_4f5e_9e25_31aecaa152f1"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_211647cf_21cb_4c08_b549_fceb433f5237"/>
