@@ -1,0 +1,73 @@
+ Today we are discussing #Flattening banknotes project# 
+  #Flattening banknotes project# Required output #Flattening module# of #Design Document# 
+ #Design Document# include #experimental report# , #Three-dimensional model# , #Demo Presentation# Wait
+ #Flattening banknotes project# Needed to meet the requirements of #Specifications# , Including 1000mm / s input banknote #speed# , 300W of #Average power# , One ten thousandth #Note card rate# , 5-8mm of #String height variation# 
+ The need to include research #Banknote paper# of #Deformation mechanism# And its influencing factors.
+ The results of the literature survey, #Banknote paper# The main ingredient is #fiber# Including cotton fiber and hemp fiber, it is a complex #Polymers# .
+ Effect of banknotes #Constitutive equation# Factors include #Paper# and #temperature# 
+ banknotes #Constitutive equation# Changes mainly for #Modulus# and #Yield point# The change
+ In #force# Under the action, if the bill exceeds its deformation #Yield strain# , Then the bill will take place at the same time #Elastically deformable# and #Plastic deformation# 
+ According to previous results, #Flattening# Process and #bending# Process is essentially the same, so are the bills happen #Permanent deformation# the process of.
+ For different #Degree of curvature# Paper, through the same flattening module, all that happens #String height# The amount of change is substantially the same.
+ In order to understand the different banknote #temperature# Under the #Yield strain# The need for different temperatures #Stretching test# Obtain banknotes #Modulus# Follow #temperature# The curve.
+ Also consider the bills #Condition# Influence of modulus
+ banknote bent substantially different layers of different banknotes occurred #Plastic strain# It is unrecoverable #Permanent strain# 
+ Banknotes #String height# Higher #Radius of curvature# The smaller bills #Degree of curvature# The larger
+ Experience tells us, bills are the more curved bend that #Loading curvature# The larger the release later banknotes #Degree of curvature# Greater
+ That is, the load on the banknotes #Load strain# The larger the banknote #Plastic strain# The larger
+ #Stretching test# You can get the bills #Yield strain# , #Modulus# 
+ The need for #Flexural plastic deformation test# Learn different #temperature# under, #Load strain# and #Release strain# The relationship between
+ and #Plastic bending test# and #Stretching test# Data obtained alignment
+ Currently at room temperature, the bill through #Radius of curvature# It is of 2mm #Curved track# Required to achieve #Flattening effect# 
+ In fact required #Curved track# of #Radius of curvature# It must be greater than 8mm, otherwise banknotes #Note card rate# And structure #Wear rate# We will not be accepted.
+ At the same time have tested copper #Contact heating# Method, the need to be heated to 160 ℃ #temperature# In order to achieve the required #Flattening effect# , Copper #Radius of curvature# To 25mm
+ Tongbang #Contact heating# Cos #Warm-up time# Too long, #temperature# Too, can not be applied in the product.
+ #to sum up# After the need to complete #banknote# of #Stretching test# , #Bending plastic deformation experiment# , While understanding feasible #heating# Methods to achieve rapid heating.
+ has now completed #Stretching test# , #Bending plastic deformation experiment# , #Experimental data# Has been submitted to the cloud above the disk, the data being processed has been some preliminary results
+  #Curvature# It can be used to measure the banknote #Degree of curvature# , Than #Radius of curvature# , #String height# Better metrics
+ #Radius of curvature# and #Curvature# A reciprocal relationship, #Curvature# It corresponds well to the #strain# , Both substantially linear.
+ #Stretching test# Obtained at different temperatures of banknotes #Modulus# and #Yield strain# 
+ #Bending plastic deformation experiment# Notes in particular given #temperature# and #Load strain# Under the #Release strain# 
+ The results of both can be corroborated each other, and with the previous two pre-test results supporting each other
+ In order to meet the requirements of #Flattening effect# , While meeting #Curved track# of #Radius of curvature# The minimum limit of 8mm is required to heat the banknote #temperature# To 70 ℃
+ banknotes #Physical parameters# include #Specific heat capacity# Is 1.1-1.6J / (g · ℃), #quality# About 1g, a single bill #size# To 0.1 × 155 × 77, the calculated single banknote flattened region #By Time# About 0.07s, 150W of #Average power# , Make up the overall bill #temperature# Increased by about 70 ℃.
+ local #Temperature# You may exceed this value, followed by #Heat Transfer Simulation# To obtain the corresponding #Temperature# Happening.
+ Taking into account the paper #Viscoelastic# Nature, when heating bills are more likely to exhibit #Creep# Nature, prolonged action #time# Will play to increase #Flattening effect# Role.
+ Current #Heating means# Included #Infrared radiation heating# and #Contact heating# 
+ #Infrared radiation heating# Is the use #Infrared heating lamp# The sheets #Radiant heating# 
+ #Infrared radiation heating# of #Heating efficiency# And infrared light #Infrared Radiation Spectrum# And banknotes #Infrared absorption spectrum# About the high degree of matching if the radiation and absorption spectra, the #Heating efficiency# high
+ #Infrared heating lamp# of #Infrared Radiation Spectrum# And banknotes #Infrared absorption spectrum# It requires targeted research and OK.
+ Experience also tells us #Infrared radiation heating# of #Heating efficiency# Between the radiation lamp and paper #Distance heating# related.
+ #Infrared radiation heating# By adding #Reflector# In the form of infrared light #Focus# , Reflector can #Mirror reflective aluminum# manufacture
+ #Contact heating# The problem is limited #Warm-up time# Too long, we need to research whether there is a corresponding solution
+ #to sum up# : After the research needs #Infrared heating lamps# of #Infrared Spectroscopy# And Selection
+ #to sum up# : To meet #Heating effect# include #Temperature# , #Heating efficiency# , #Warm-up time# Wait #Specifications# Requirements
+ #to sum up# : Research to determine the banknote #Infrared absorption spectrum# .twenty one.  #to sum up# : #experiment# and #simulation# Determine the different #Heating program# Detailstwenty two.  #to sum up# : #Heating program# The details include #Heating effect# and #Optimization# .
+ In order to meet #Average power# Less than 150W design requirements, taking into account #Flattening module# Intermittent operation features can be used to add #UPS power storage module# 
+ banknotes #Infrared absorption spectrum# The absorption peak #Far-infrared band# 
+ #Infrared heating lamp# The emission spectrum of the lamp #surface temperature# Related to a surface temperature of 300 ℃, the emission spectrum mainly in #Far-infrared band# .
+ #Carbon fiber infrared lamp# Concentrated in the emission spectrum #Far-infrared band# High electric conversion efficiency, #Heating efficiency# high.
+ #Reflector# use #Ellipsoidal reflector mask# can be realised #Focus# Role in enhancing #Heating effect# 
+ The experiments show that there are #Ellipsoidal reflector mask# When, 300W infrared heating tube #distance# Banknotes 6cm place, to achieve the 30 ℃ / 0.05s of #Heating effect# .
+ Use #Infrared Imager# Of banknotes #Warming effect# Measured by image processing to obtain #temperature# data.
+  #Radiant heating simulation# The results show that the structure can be reduced by heating lamp #size# Reduce heat #distance# , Thereby increasing #Heating effect# 
+ Experiments show #Contact heating# When paper rapid heating, #Heating effect# it is good,
+ #Contact heating# Basically it can instantly heats paper to contact therewith #Heating roller# of #temperature# 
+ You can #Ceramic heating# and #Metal thin film# The combination of fast #Preheating# and #Contact heating# .
+ given #Radiant heating# Program #Three-dimensional design# and #Contact heating# Program #Three-dimensional design# 
+ #Problems# : Including whether it will affect #Photoelectric Sensors# work
+ #Problems# : Whether because of #Heat damage#  #Mechanical structure# Or affect the mechanical structure #strength# 
+ #Problems# : #Life# I can guarantee 8000 hours
+ #Problems# : The track will affect confetti #radiation#  #Heating efficiency# 
+ #Problems# : #temperature#  #safe question# 
+ #Problems# : #cost# How much money accounting
+ #Problems# : How to design a system to ensure #Banknote security#  #Safety defenders#  #User Safety# 
+ #Problems# : How to consider rail #Static conductive# The problem
+  #solution# : By increasing the #sensor# Number of avoiding a #sensor# Failure to bring the issue
+  #solution# : By using #Semi-plated white tube# instead #Reflector# To avoid the dust brought reflector #Reflection efficiency# decline
+ #solution# : By increasing #Cleaning roller# Correct #Heating roller# get on #clean# 
+ #solution# : Through rational design #Safety circuit# improve #safety# 
+ #solution# : Use high quality #Carbon fiber heating lamp# Extend tube #Life# 
+ #solution# : #cost# Accounting for about 700 yuan
+ #solution# :use #metallic material# Or PC + carbon fiber materials to improve the structure #Heat resistance# , which is #high temperature# Under the #strength# 
+  #solution# :use #metallic material# Or PC + carbon fiber materials to improve the structure of #Conductivity# ,solve #Electrostatic# 

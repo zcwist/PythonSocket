@@ -98,7 +98,7 @@ $(document).ready(function(){
 			}[data['type']])();
 
 			
-			$("#messagebox").animate({ scrollTop: $('#messagebox')[0].scrollHeight}, 1000);
+			$("#messagebox").animate({ scrollTop: $('#messagebox')[0].scrollHeight}, 100);
 	};
 
 	function addMessage(div,message) {
@@ -163,8 +163,43 @@ $(document).ready(function(){
 			send(); 
 		}  
 	}); 
+	$("#fullmapview").hide();
+	$("#fullscreen").click(function() {
+		/* Act on the event */
+		console.log("full");
+		graph2 = graph
 
+		var spring2 = $("#fullviewport").springy({
+			graph:graph2
+		})
 
+		$("#fullmapview").show();
+
+		// $(function() {
+
+		//     function abso() {
+
+		//         $('#fullmaprow').css({
+		//             position: 'absolute',
+		//             width: $(window).width(),
+		//             height: $(window).height()
+		//         });
+
+		//     }
+
+		//     $(window).resize(function() {
+		//         abso();         
+		//     });
+
+		//     abso();
+
+		// });
+	});
+	$("#closefull").click(function() {
+		$("#fullmapview").hide();
+	});
+
+	
 
 
 
@@ -196,7 +231,28 @@ $(document).ready(function(){
 	canvas.width = $("#termMap").width();
 	canvas.height = $("#termMap").height();
 
+	var fullcanvsa = document.getElementById("fullviewport");
+	fullcanvsa.width = $("#fullmapview").width();
+	fullcanvsa.height = $("#fullmapview").height();
+
 	var lastNodeSelected = null;
+
+	var layout = new Springy.Layout.ForceDirected(
+		graph,
+		400.0, //Spring stiffness
+		1.0, //Node repulsion
+		0.5 //Damping
+	);
+
+	var renderer = new Springy.Renderer(
+		layout,
+		function clear(){},
+		function drawEdge(edge, p1, p2){},
+		function drawNode(node, p ){}
+	);
+
+	renderer.start();
+
 
 	var springy = $("#viewport").springy({
 		graph:graph,
@@ -214,6 +270,8 @@ $(document).ready(function(){
 			// console.log(JSON.stringify(node.data));
 		}
 	});
+
+
 	var selectnode = '';
 
 	$("#foo").on("click", function(event, termstr, parentnodestr){
@@ -236,11 +294,6 @@ $(document).ready(function(){
 			});
 		}
 
-
-
-
-		
-
 		if (parentnodestr != ""){
 			$.each(graph.nodes, function(index, val) {
 				if (val['data']['label'] == parentnodestr){
@@ -250,13 +303,6 @@ $(document).ready(function(){
 			
 			newEdgeWithColor(parentnode,newnode);
 		}
-		// console.log(graph);
-		// graph.addNodes(term);
-
-		// graph.addNodes(newnode);
-		// graph.addEdges(['Topic', newnode, {color: colorList[getRandomInt(0,6)]}])
-		// graph.newEdge(topicnode,newnode,{color: colorList[getRandomInt(0,6)]});
-		// newEdgeWithColor(topicnode, newnode);
 	})
 
 	function getRandomInt(min, max) {

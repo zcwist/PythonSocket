@@ -46,7 +46,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="input-group">
 						<input id='selectnode' type="text" class="form-control" placeholder="You select...">
 						<span class="input-group-btn">
@@ -58,20 +58,32 @@
 				<div class="col-md-2">
 					<button id="connectbutton" type="button" class="btn btn-success fromself">Connect</button>						
 				</div>
+				<div class="col-md-1">
+					<button id="fullscreen" type="button" class="btn btn-default">Full screen</button>	
+					
+				</div>
 	
 
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div id='termMap' class="withborder">
-						<canvas id="viewport"></canvas>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 
 		</div>
 		<div id="foo">
+			
+		</div>
+
+		<div class="container overlay withborder" id="fullmapview">
+			<div class="row">
+				<span class="glyphicon glyphicon-remove center" aria-hidden="true" id="closefull"></span>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id='termMap'>
+						<canvas id="fullviewport"></canvas>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 		

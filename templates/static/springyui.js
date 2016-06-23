@@ -29,10 +29,10 @@ jQuery.fn.springy = function(params) {
 	var graph = this.graph = params.graph || new Springy.Graph();
 	var nodeFont = "16px Verdana, sans-serif";
 	var edgeFont = "8px Verdana, sans-serif";
-	var stiffness = params.stiffness || 400.0;
-	var repulsion = params.repulsion || 400.0;
-	var damping = params.damping || 0.5;
-	var minEnergyThreshold = params.minEnergyThreshold || 0.00001;
+	var stiffness = params.stiffness || 60.0;
+	var repulsion = params.repulsion || 40.0;
+	var damping = params.damping || 0.2;
+	var minEnergyThreshold = params.minEnergyThreshold || 0.001;
 	var nodeSelected = params.nodeSelected || null;
 	var nodeImages = {};
 	var edgeLabelsUpright = true;
@@ -312,11 +312,14 @@ jQuery.fn.springy = function(params) {
 
 			// fill background
 			if (selected !== null && selected.node !== null && selected.node.id === node.id) {
-				ctx.fillStyle = "#FFFFE0";
+				// ctx.fillStyle = "#FFFFE0";
+				ctx.fillStyle = "rgba(255,255,224,0.8)";
 			} else if (nearest !== null && nearest.node !== null && nearest.node.id === node.id) {
-				ctx.fillStyle = "#EEEEEE";
+				// ctx.fillStyle = "#EEEEEE";
+				ctx.fillStyle = "rgba(238,238,238,0.8)";
 			} else {
-				ctx.fillStyle = "#FFFFFF";
+				// ctx.fillStyle = "#FFFFFF";
+				ctx.fillStyle = "rgba(255,255,255,0.8)";
 			}
 			ctx.fillRect(s.x - boxWidth/2, s.y - boxHeight/2, boxWidth, boxHeight);
 
