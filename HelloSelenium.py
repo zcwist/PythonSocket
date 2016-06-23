@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 path = "/Users/kiwi/Downloads/chromedriver"
-path = "/home/kiwi/Downloads/chromedriver"
+# path = "/home/kiwi/Downloads/chromedriver"
 
 
 driver = webdriver.Chrome(path)
