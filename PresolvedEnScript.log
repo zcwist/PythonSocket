@@ -1,6 +1,6 @@
  Today we are discussing #Flattening banknotes project# 
   #Flattening banknotes project# Required output #Flattening module# of #Design Document# 
- #Design Document# include #experimental report# , #Three-dimensional model# , #Demo Presentation# Wait
+ #Design Document# include #experimental report# , #Three-dimensional model# , #Demo Presentation# etc
  #Flattening banknotes project# Needed to meet the requirements of #Specifications# , Including 1000mm / s input banknote #speed# , 300W of #Average power# , One ten thousandth #Note card rate# , 5-8mm of #String height variation# 
  The need to include research #Banknote paper# of #Deformation mechanism# And its influencing factors.
  The results of the literature survey, #Banknote paper# The main ingredient is #fiber# Including cotton fiber and hemp fiber, it is a complex #Polymers# .
@@ -30,7 +30,8 @@
  #Bending plastic deformation experiment# Notes in particular given #temperature# and #Load strain# Under the #Release strain# 
  The results of both can be corroborated each other, and with the previous two pre-test results supporting each other
  In order to meet the requirements of #Flattening effect# , While meeting #Curved track# of #Radius of curvature# The minimum limit of 8mm is required to heat the banknote #temperature# To 70 ℃
- banknotes #Physical parameters# include #Specific heat capacity# Is 1.1-1.6J / (g · ℃), #quality# About 1g, a single bill #size# To 0.1 × 155 × 77, the calculated single banknote flattened region #By Time# About 0.07s, 150W of #Average power# , Make up the overall bill #temperature# Increased by about 70 ℃.
+ #Physical parameters#
+ banknotes #Physical parameters# include #Specific heat capacity# Is 1.1-1.6J / (g · ℃), #quality# About 1g, a single bill #size# To 0.1 × 155 × 77, the calculated single banknote flattened region by #Time# About 0.07s, 150W of #Average power# , Make up the overall bill #temperature# Increased by about 70 ℃.
  local #Temperature# You may exceed this value, followed by #Heat Transfer Simulation# To obtain the corresponding #Temperature# Happening.
  Taking into account the paper #Viscoelastic# Nature, when heating bills are more likely to exhibit #Creep# Nature, prolonged action #time# Will play to increase #Flattening effect# Role.
  Current #Heating means# Included #Infrared radiation heating# and #Contact heating# 
