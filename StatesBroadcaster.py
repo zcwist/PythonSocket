@@ -1,4 +1,5 @@
 from DesignState import DesignState
+from TermMap import TermMap
 
 class StatesBroadcaster(object):
 	"""docstring for StatesBroadcaster"""
@@ -17,3 +18,5 @@ class StatesBroadcaster(object):
 				self.socketHandler.send_to_other(state.getStateJson())
 			elif receiver == "self":
 				self.socketHandler.send_to_self(state.getStateJson())
+
+		print (TermMap.getStatistics())

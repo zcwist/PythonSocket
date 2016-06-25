@@ -106,6 +106,7 @@ class SocketHandler(tornado.websocket.WebSocketHandler):
 		solver = DesignStateSolver(message)
 		broadcaster = StatesBroadcaster(solver.getStateToSend(),self)
 		broadcaster.broadcast()
+		# print (TermMap.getStatistics())
 		
 
 if __name__ == '__main__':

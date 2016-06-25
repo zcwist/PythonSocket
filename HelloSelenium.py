@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+from TermMap import TermMap
 
 path = "/Users/kiwi/Downloads/chromedriver"
 path = "/home/kiwi/Downloads/chromedriver"
