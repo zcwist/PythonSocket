@@ -3,8 +3,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 from TermMap import TermMap
 
-path = "/Users/kiwi/Downloads/chromedriver"
-path = "/home/kiwi/Downloads/chromedriver"
+path = "/Users/kiwi/Downloads/chromedriver-2"
+# path = "/home/kiwi/Downloads/chromedriver"
 
 
 driver = webdriver.Chrome(path)
@@ -17,7 +17,7 @@ file = open("PresolvedEnScript.log","r")
 
 for line in file:
 	elem.send_keys(line)
-	time.sleep(0.1)
+	time.sleep(0.2)
 
 elem.send_keys(Keys.RETURN)
 
